@@ -3,7 +3,7 @@ import numpy as np
 
 N = 100
 
-tensor = np.zeros((N, N, N))
+tensor = np.random.random((N, N, N))
 
 for i in range(N):
     for j in range(N):
