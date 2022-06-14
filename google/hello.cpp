@@ -3,6 +3,8 @@
 
 #include <iostream>
 using namespace std;
+// we need the following include for setw() in some c++ implementations
+#include <iomanip>
 
 int main()
 {
@@ -10,7 +12,7 @@ int main()
     {
         for (int i = 0; i < 4; i++)
         {
-            cout << "Hello World! ";
+            cout << setw(17) << "Hello World! ";
         }
         cout << endl;
     }
