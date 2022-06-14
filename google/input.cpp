@@ -13,16 +13,19 @@ int main()
     do
     {
         cout << "Enter a number (-1 = quit): ";
+        cin >> input_var;
         // The following line accepts input from the keyboard into
         // variable input_var.
         // cin returns false if an input operation fails, that is, if
         // something other than an int (the type of input_var) is entered.
-        if (!(cin >> input_var))
-        {
-            cout << "You entered a non-numeric. Exiting..." << endl;
-            break;
-            // exit the do while loop
-        }
+        // if (!(cin >> input_var))
+        // {
+        //     cout << "You entered a non-numeric." << endl;
+        //     // cin.clear();
+        //     // cin.ignore();
+        //     // break;
+        //     // exit the do while loop
+        // }
         if (input_var != -1)
         {
             cout << "You entered " << input_var << endl;
