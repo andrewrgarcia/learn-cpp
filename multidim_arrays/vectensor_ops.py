@@ -5,6 +5,11 @@ use this as a template for C++ tensor operations
 '''
 
 import numpy as np
+import matplotlib.pyplot as plt
+
+import sys
+sys.path.append('/home/andrew/scripts') 
+from kmc_crystals.modules import crystaltensor3 as xt3
 
 
 def swap(dst,axord=(0,1,2),dims = (3,3,3)):
@@ -117,23 +122,46 @@ tensor = np.ones((3,3,3))
 vec = np.ones((27))
 
 
-def matrix_levelcheck():
-    L = np.random.randint(0,2,(6,6))
-    levs = np.zeros(6)
+def matrix_levelcheck(mat):
+    L,X = mat.shape
+    # mat = np.random.randint(0,2,(L,L))
     
-    for i in range(6):
+    levs = np.zeros(L)
+    
+    for i in range(L):
         value = 0  
         k=0
-        while not value and k < 6:
-            value = L[k,i]    
-            print(value)
+        while not value and k < L:
+            value = mat[k,i]    
+            # print(value)
             # print(i)
             levs[i] = k
             k+=1
 
+    return mat,levs
 
+# mat,levs =  matrix_levelcheck(9)
 
-    print(levs)
-    print(L)
+def tensor_levelcheck(tensor):
+    src = tensor.copy()
+    src = np.transpose(src,(1,0,2))
+    
+    Z,Y,X = src.shape
+    levels_mat = np.zeros((Y,X))
+    for i in range(Y):
+        mat, levs = matrix_levelcheck(src[i])
+        levels_mat[i] = levs
+        
+    return levels_mat
 
-matrix_levelcheck()
+# print(levs)
+# plt.imshow(mat,cmap='cool')
+
+tensor = np.random.randint(0,2,(3*[4]))
+lvls= tensor_levelcheck(tensor)
+
+tensor[0,0,1] = 2 if tensor[0,0,1] == 1 else 0
+xt3.crystalvoxels(xt3.graphical_flip(tensor),'mof')
+# xt3.crystalvoxels(np.transpose(tensor,(2,0,1)),'mof')
+print(lvls)
+print(tensor[0])
