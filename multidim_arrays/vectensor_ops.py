@@ -101,7 +101,7 @@ def tensor_neighbors(dst,crds=(1,1,1),L=3):
     
 A = np.arange(1,28)
 
-A = vectenswap(A,(2,1,0))
+A = swap(A,(2,1,0))
 
 A = A.reshape((3,3,3))
 
@@ -115,3 +115,25 @@ print(np.allclose(A,B))
 
 tensor = np.ones((3,3,3))
 vec = np.ones((27))
+
+
+def matrix_levelcheck():
+    L = np.random.randint(0,2,(6,6))
+    levs = np.zeros(6)
+    
+    for i in range(6):
+        value = 0  
+        k=0
+        while not value and k < 6:
+            value = L[k,i]    
+            print(value)
+            # print(i)
+            levs[i] = k
+            k+=1
+
+
+
+    print(levs)
+    print(L)
+
+matrix_levelcheck()
