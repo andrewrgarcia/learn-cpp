@@ -160,7 +160,11 @@ def tensor_levelcheck(tensor):
 tensor = np.random.randint(0,2,(3*[4]))
 lvls= tensor_levelcheck(tensor)
 
-tensor[0,0,1] = 2 if tensor[0,0,1] == 1 else 0
+tensor[0,0,0] = 2 if tensor[0,0,0] == 1 else 0
+tensor[0,1,1] = 2 if tensor[0,1,1] == 1 else 0
+tensor[0,2,2] = 2 if tensor[0,2,2] == 1 else 0
+tensor[0,3,3] = 2 if tensor[0,3,3] == 1 else 0
+
 xt3.crystalvoxels(xt3.graphical_flip(tensor),'mof')
 # xt3.crystalvoxels(np.transpose(tensor,(2,0,1)),'mof')
 print(lvls)
