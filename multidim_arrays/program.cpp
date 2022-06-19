@@ -19,9 +19,7 @@ int main()
     std::mt19937 generator(123);
 
     for (int i = 0; i < N; i++)
-    {
         for (int j = 0; j < N; j++)
-        {
             for (int k = 0; k < N; k++)
             {
                 // std::cout << "coordinates" << i << j << "value" << tensor[i][j]
@@ -30,8 +28,6 @@ int main()
                 tensor[i][j][k] = (double)generator() / (double)generator.max();
                 printf("coordinates (%d,%d,%d) - value: %f \n", i, j, k, tensor[i][j][k]);
             }
-        }
-    }
 
     // std::cout << tensor[4][3][2] << std::endl;
 
