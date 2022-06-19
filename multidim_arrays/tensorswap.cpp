@@ -25,26 +25,70 @@
 
 */
 
-// void swap(int vector)
-// {
+void tensorprint(std::vector<int> vector)
+{
+    int N = (std::cbrt(vector.size()) + 0.5);
+    for (int k = 0; k < N; k++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            for (int i = 0; i < N; i++)
+            {
+                printf("%d ",
+                       vector[(N * N) * k + N * j + i]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    }
+}
 
-//     int N = 3;
-//     int dst[N * N * N];
-//     for (int k = 0; k < N; k++)
-//         for (int j = 0; j < N; j++)
-//             for (int i = 0; i < N; i++)
-//             {
-//                 dst[(N * N) * k + N * j + i] =
-//                     vector[(N * N) * i + N * j + k];
-//             }
-//     return;
-// }
+void swap210(std::vector<int> &vector)
+{
+    // vector[0] = 1;
+    int N = (std::cbrt(vector.size()) + 0.5);
+
+    std::vector<int> dst(vector.size());
+    for (int k = 0; k < N; k++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            for (int i = 0; i < N; i++)
+            {
+                dst[(N * N) * k + N * j + i] =
+                    vector[(N * N) * i + N * j + k];
+            }
+        }
+    }
+    vector = dst;
+}
+
+void swap102(std::vector<int> &vector)
+{
+    // vector[0] = 1;
+    int N = (std::cbrt(vector.size()) + 0.5);
+
+    std::vector<int> dst(vector.size());
+    for (int k = 0; k < N; k++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            for (int i = 0; i < N; i++)
+            {
+                dst[(N * N) * k + N * j + i] =
+                    vector[(N * N) * j + N * k + i];
+            }
+        }
+    }
+    vector = dst;
+}
 
 int main()
 {
+
     int N = 3;
-    int vector[N * N * N];
-    // printf("\n%f", vectensor[0]);
+    // int vector[N * N * N];
+    std::vector<int> vector(N * N * N, 0);
 
     printf("TENSOR:\n");
 
@@ -57,9 +101,6 @@ int main()
             {
                 c++;
                 vector[(N * N) * k + N * j + i] = c;
-                // printf("tensor[%d][%d][%d]: %d\n", k, j, i,
-                //        vector[(N * N) * k + N * j + i]);
-
                 printf("%d ",
                        vector[(N * N) * k + N * j + i]);
             }
@@ -69,38 +110,11 @@ int main()
     }
 
     printf("TENSOR TRANSPOSE (2,1,0):\n");
-    int dst[N * N * N];
-    for (int k = 0; k < N; k++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            for (int i = 0; i < N; i++)
-            {
-                dst[(N * N) * k + N * j + i] =
-                    vector[(N * N) * i + N * j + k];
-                printf("%d ",
-                       dst[(N * N) * k + N * j + i]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
+    swap210(vector);
+    tensorprint(vector);
 
     printf("TENSOR TRANSPOSE (1,0,2):\n");
-    int dst2[N * N * N];
-    for (int k = 0; k < N; k++)
-    {
-        for (int j = 0; j < N; j++)
-        {
-            for (int i = 0; i < N; i++)
-            {
-                dst2[(N * N) * k + N * j + i] =
-                    vector[(N * N) * j + N * k + i];
-                printf("%d ",
-                       dst2[(N * N) * k + N * j + i]);
-            }
-            printf("\n");
-        }
-        printf("\n");
-    }
+    swap210(vector); // reset the tensor swap
+    swap102(vector); // now swap to 102
+    tensorprint(vector);
 }
