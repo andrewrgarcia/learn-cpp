@@ -17,20 +17,6 @@ def swap(dst,axord=(0,1,2),dims = (3,3,3)):
     src = dst.copy()
     Z,Y,X = dims
     
-    # io = np.zeros((3,3)).astype(int)
-    # io_k=0
-    # for i in axord[::-1]:
-    #     io[io_k,i] = 1
-    #     io_k+=1
-
-    # for k in range(Z):
-    #     for j in range(Y):
-    #         for i in range(X):
-    #             k_ = np.sum(io[0]*[i,j,k])
-    #             j_ = np.sum(io[1]*[i,j,k])
-    #             i_ = np.sum(io[2]*[i,j,k])
-
-    #             dst[(Z*Y)*k+(Y)*j + i] = src[(Z*Y)*k_+(Y)*j_ + i_]
 
     if axord == (2,1,0):
         
@@ -77,12 +63,7 @@ def tensor_neighbors(dst,crds=(1,1,1),L=3):
         
     neighbors = 0
     
-    # dirs  = np.zeros((6,3)).astype(int)
-    # k=0 
-    # for d in range(3):
-    #     for i in [-1,1]:
-    #         dirs[k,d]=i
-    #         k+=1
+
             
     dirs = np.array([[-1,  0,  0],
        [ 1,  0,  0],
@@ -102,8 +83,6 @@ def tensor_neighbors(dst,crds=(1,1,1),L=3):
 
 
         
-    
-    
 A = np.arange(1,28)
 
 A = swap(A,(2,1,0))
@@ -165,7 +144,7 @@ tensor[0,1,1] = 2 if tensor[0,1,1] == 1 else 0
 tensor[0,2,2] = 2 if tensor[0,2,2] == 1 else 0
 tensor[0,3,3] = 2 if tensor[0,3,3] == 1 else 0
 
-xt3.crystalvoxels(xt3.graphical_flip(tensor),'mof')
-# xt3.crystalvoxels(np.transpose(tensor,(2,0,1)),'mof')
-print(lvls)
-print(tensor[0])
+# xt3.crystalvoxels(xt3.graphical_flip(tensor),'mof')
+# # xt3.crystalvoxels(np.transpose(tensor,(2,0,1)),'mof')
+# print(lvls)
+# print(tensor[0])
