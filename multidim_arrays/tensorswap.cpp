@@ -43,6 +43,32 @@ void tensorprint(std::vector<int> vector)
     }
 }
 
+std::vector<int> make_tensor()
+{
+
+    int N = 3;
+    // int vector[N * N * N];
+    std::vector<int> vector(N * N * N, 0);
+
+    int c = 0;
+    for (int k = 0; k < N; k++)
+    {
+        for (int j = 0; j < N; j++)
+        {
+            for (int i = 0; i < N; i++)
+            {
+                c++;
+                vector[(N * N) * k + N * j + i] = c;
+                // printf("%d ",
+                //        vector[(N * N) * k + N * j + i]);
+            }
+            // printf("\n");
+        }
+        // printf("\n");
+    }
+    return vector;
+}
+
 void swap210(std::vector<int> &vector)
 {
     // vector[0] = 1;
@@ -83,31 +109,86 @@ void swap102(std::vector<int> &vector)
     vector = dst;
 }
 
-int main()
+std::vector<int> vectorsum(std::vector<int> a, std::vector<int> b)
+{
+    // https://stackoverflow.com/questions/28607912/sum-values-of-2-vectors
+    std::transform(a.begin(), a.end(), b.begin(), a.begin(), std::plus<int>());
+    return a;
+}
+
+int neighbors(std::vector<int> vtensor, std::vector<int> &coords)
 {
 
-    int N = 3;
-    // int vector[N * N * N];
-    std::vector<int> vector(N * N * N, 0);
+    // neighbor pointers in tensor 3D dims
+    std::vector<std::vector<int>> dirs{
+        {-1, 0, 0},
+        {1, 0, 0},
+        {0, -1, 0},
+        {0, 1, 0},
+        {0, 0, -1},
+        {0, 0, 1}};
 
-    printf("TENSOR:\n");
+    int N = (std::cbrt(vtensor.size()) + 0.5);
 
-    int c = 0;
+    int neigh = 0;
+    for (int i = 0; i < 6; i++)
+    {
+        std::vector<int> ncrds{vectorsum(coords, dirs[i])};
+        // PRINT NCRDS
+        // for (int x : ncrds)
+        //     std::cout << x << " ";
+
+        if (std::find(
+                ncrds.begin(), ncrds.end(), -1) != ncrds.end() != 1 &&
+            std::find(
+                ncrds.begin(), ncrds.end(), N) != ncrds.end() != 1)
+        {
+            // printf("\nin bounds!");
+            int kc{ncrds[0]}, jc{ncrds[1]}, ic{ncrds[2]};
+            int atom_site = vtensor[(N * N) * kc + N * jc + ic];
+            if (atom_site == 1)
+            {
+                neigh++;
+            }
+        }
+        else
+        {
+            // printf("\nout of bounds");
+        }
+
+        // printf("\n");
+    }
+
+    return neigh;
+}
+
+void neighbor_grid(std::vector<int> vector)
+{
+    int N = (std::cbrt(vector.size()) + 0.5);
     for (int k = 0; k < N; k++)
     {
         for (int j = 0; j < N; j++)
         {
             for (int i = 0; i < N; i++)
             {
-                c++;
-                vector[(N * N) * k + N * j + i] = c;
-                printf("%d ",
-                       vector[(N * N) * k + N * j + i]);
+                std::vector<int> coords{k, j, i};
+                int neighs{neighbors(vector, coords)};
+                printf("%d ", neighs);
+                // printf("%d ",
+                //        vector[(N * N) * k + N * j + i]);
             }
             printf("\n");
         }
         printf("\n");
     }
+}
+
+int main()
+{
+
+    printf("TENSOR:\n");
+    std::vector<int> vector{make_tensor()};
+    tensorprint(vector);
 
     printf("TENSOR TRANSPOSE (2,1,0):\n");
     swap210(vector);
@@ -117,4 +198,16 @@ int main()
     swap210(vector); // reset the tensor swap
     swap102(vector); // now swap to 102
     tensorprint(vector);
+
+    // NUMBER OF NEIGHBORS
+    std::vector<int> coords{1, 1, 1};
+    int L = 10;
+    std::vector<int> vectensor(L * L * L, 1);
+    vectensor[2] = 0;
+    int neighs{neighbors(vectensor, coords)};
+    // swap210(vectensor);
+    printf("tensor\n");
+    tensorprint(vectensor);
+    printf("neighbors grid (tensor)\n");
+    neighbor_grid(vectensor);
 }
