@@ -4,7 +4,6 @@ using namespace std;
 // Implement the class Box
 class Box
 {
-private:
     int l;
     int b;
     int h;
@@ -17,6 +16,12 @@ public:
     int getHeight();             // Return box's height
     long long CalculateVolume(); // Return the volume of the box
 };
+
+Box::Box(int V)
+{
+    this->V = V;
+    adj.resize(V);
+}
 
 // l,b,h are integers representing the dimensions of the box
 
