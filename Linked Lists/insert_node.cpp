@@ -23,8 +23,9 @@ void sortedInsert(Node **head_ref,
     /* Special case for the head end */
     if (*head_ref == NULL || (*head_ref)->data >= new_node->data)
     {
-        new_node->next = *head_ref;
-        *head_ref = new_node;
+        // INSERT NEW NODE BEFORE HEAD
+        new_node->next = *head_ref; // "after new_node" is set to value pointed by head_ref
+        *head_ref = new_node;       // pointer to head_ref is set to new_node
     }
     else
     {
@@ -35,6 +36,7 @@ point of insertion */
         {
             current = current->next;
         }
+        // INSERT NEW NODE AFTER HEAD AFTER SMALLER VALUE
         new_node->next = current->next;
         current->next = new_node;
     }
