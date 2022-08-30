@@ -9,21 +9,48 @@ class Box
     int h;
 
 public:
+    Box();                                    // default constructor
     Box(int length, int breadth, int height); // constructor
-    Box(const Box &obj);
-    int getLength();             // Return box's length
-    int getBreadth();            // Return box's breadth
-    int getHeight();             // Return box's height
-    long long CalculateVolume(); // Return the volume of the box
+    Box(const Box &B);                        // copy constructor
+
+    int getLength() { return l; };                           // Return box's length
+    int getBreadth() { return b; };                          // Return box's breadth
+    int getHeight() { return h; };                           // Return box's height
+    long long CalculateVolume() { return 1LL * l * b * h; }; // Return the volume of the box
+
+    bool operator<(const Box &B) const
+    {
+        if (l < B.l)
+            return true;
+        if (b < B.b && l == B.l)
+            return true;
+        if (h < B.h && b == B.b && l == B.l)
+            return true;
+        return false;
+    }
 };
 
-Box::Box(int V)
+Box::Box()
 {
-    this->V = V;
-    adj.resize(V);
+    l = 0, b = 0, h = 0;
+}
+Box::Box(int length, int breadth, int height)
+{
+    l = length, b = breadth, h = height;
+}
+Box::Box(const Box &B)
+{
+    l = B.l, b = B.b, h = B.h;
 }
 
-// l,b,h are integers representing the dimensions of the box
+std::ostream &operator<<(std::ostream &out, Box B)
+{
+    out << B.getLength() << " " << B.getBreadth() << " " << B.getHeight();
+
+    return out;
+}
+
+// CODE WRITING ENDS HERE ---- Andrew
 
 // The class should have the following functions :
 
