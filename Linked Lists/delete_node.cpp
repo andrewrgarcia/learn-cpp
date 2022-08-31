@@ -41,7 +41,7 @@ void deleteNode(Node *head, Node *n)
     // When not first node, follow
     // the normal deletion process
 
-    // find the previous node
+    // find the previous node ("prev" not automatically prev; it is found recursively (below:))
     Node *prev = head;
     while (prev->next != NULL && prev->next != n)
         prev = prev->next;
@@ -54,7 +54,7 @@ void deleteNode(Node *head, Node *n)
     }
 
     // Remove node from Linked List
-    prev->next = prev->next->next;
+    prev->next = prev->next->next; // o --- x --- s  =>>  o --- s
 
     // Free memory
     free(n);
@@ -67,8 +67,8 @@ void push(Node **head_ref, int new_data)
 {
     Node *new_node = new Node();
     new_node->data = new_data;
-    new_node->next = *head_ref;
-    *head_ref = new_node;
+    new_node->next = *head_ref; // "after new_node" is set to value pointed by head_ref
+    *head_ref = new_node;       // pointer to head_ref is set to new_node
 }
 
 /* Utility function to print a linked list */

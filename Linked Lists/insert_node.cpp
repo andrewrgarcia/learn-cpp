@@ -37,8 +37,9 @@ point of insertion */
             current = current->next;
         }
         // INSERT NEW NODE AFTER HEAD AFTER SMALLER VALUE
-        new_node->next = current->next;
-        current->next = new_node;
+        //   o  ---  s
+        new_node->next = current->next; // "after new_node" is set to after current    x --- > s
+        current->next = new_node;       // after current is set to new node    o ---  x ---  s
     }
 }
 
