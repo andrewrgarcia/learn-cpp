@@ -29,7 +29,7 @@ int _lis(int arr[], int n, int *max_ref)
     needs to be updated, then update it */
     for (int i = 1; i < n; i++)
     {
-        res = _lis(arr, i, max_ref);
+        res = _lis(arr, i, max_ref); // "ending with `n` in this recursion (i.e. n==i)"
         if (arr[i - 1] < arr[n - 1] && res + 1 > max_ending_here)
             max_ending_here = res + 1;
     }
