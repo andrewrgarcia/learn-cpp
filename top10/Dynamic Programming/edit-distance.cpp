@@ -27,10 +27,10 @@ int editDist(string str1, string str2, int m, int n)
     // operations on last character of first string,
     // recursively compute minimum cost for all three
     // operations and take minimum of three values.
-    return 1 + min(editDist(str1, str2, m, n - 1), // Insert
-                   editDist(str1, str2, m - 1, n), // Remove
-                   editDist(str1, str2, m - 1,
-                            n - 1) // Replace
+    return 1 + min(
+                   editDist(str1, str2, m, n - 1),    // Insert
+                   editDist(str1, str2, m - 1, n),    // Remove
+                   editDist(str1, str2, m - 1, n - 1) // Replace
                );
 }
 
