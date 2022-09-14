@@ -8,7 +8,8 @@ using namespace std;
 /* Define Infinite as a large enough
 value.This value will be used for
 vertices not connected to each other */
-#define INF 99999
+// #define INF 99999
+#define INF INT_MAX
 
 // A function to print the solution matrix
 void printSolution(int dist[][V]);
