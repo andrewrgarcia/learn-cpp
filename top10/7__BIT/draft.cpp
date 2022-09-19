@@ -33,6 +33,10 @@ int main()
 
     cout << temp->value << endl;
 
-    cout << temp->arr << endl;
-    // cout << temp->arr0 << endl;
+    // cout << temp->arr << endl;
+    int len = sizeof(temp->arr) / sizeof(temp->arr[0]);
+    for (int i = 0; i < len; i++)
+    {
+        cout << temp->arr[i] << endl;
+    }
 }
