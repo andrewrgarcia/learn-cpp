@@ -76,7 +76,7 @@ void allPalPartitions(string str)
 // Driver program
 int main()
 {
-    string str = "nitin";
+    string str = "saippuakivikauppias";
     allPalPartitions(str);
     return 0;
 }
