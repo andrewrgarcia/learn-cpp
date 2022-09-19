@@ -41,8 +41,8 @@ void allPalPartUtil(vector<vector<string>> &allPart, vector<string> &currPart,
             // Recur for remaining substring
             allPalPartUtil(allPart, currPart, i + 1, n, str);
 
-            // Remove substring str[start..i] from current
-            // partition
+            // Remove substring str[start..i] from current partition
+            // these are the incomplete substrings, so to speak ^^
             currPart.pop_back();
         }
     }
