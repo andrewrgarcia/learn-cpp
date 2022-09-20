@@ -5,6 +5,7 @@ void zigZag(vector<int> &arr, int N)
 {
     // sort the array by using the sort function
     sort(arr.begin(), arr.end());
+    // sort(arr, arr + N); // <--- does not work on arrays works on lists arr[] only
 
     // traverse the array from 1 to N -1
     for (int i = 1; i < N - 1; i += 2)
