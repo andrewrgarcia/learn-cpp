@@ -1,3 +1,7 @@
+// C++ program to generate a JSON-serialized jason.js database of 3-D "nodes"
+// with randomly-selected colors, given properties with randomly-selected magnitudes,
+// and placed in random 3-D space.
+// Andrew Garcia, 2022
 #include <iostream>
 #include <string>
 #include <chrono>
@@ -102,7 +106,7 @@ int main(int argc, char **argv)
     printvector(voltages);
     printvector(states);
 
-    // jsonify
+    // jsonmake
     std::ofstream ofs("jason.js", std::ofstream::out);
     ofs << "{\"xyz\":\"[";
     for (int j = 0; j < N; j++)
@@ -159,7 +163,7 @@ int main(int argc, char **argv)
     ofs.close();
 }
 
-void jsonify(std::vector<int> vector)
+void jsonmake(std::vector<int> vector)
 {
 
     int N = (std::cbrt(vector.size()) + 0.5);
@@ -179,7 +183,7 @@ void jsonify(std::vector<int> vector)
         }
     }
 
-    // jsonify jason matrix
+    // jsonmake jason matrix
     int M = jason.size();
 
     std::ofstream ofs("jason.js", std::ofstream::out);
