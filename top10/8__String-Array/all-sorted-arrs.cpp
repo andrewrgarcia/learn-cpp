@@ -13,6 +13,7 @@ greater than 0. We try than all possible combinations */
 void generateUtil(int A[], int B[], int C[], int i, int j, int m, int n,
                   int len, bool flag)
 {
+    // vv FLAG SWITCHES THE ARRAY TO APPEND --> EITHER A OR B ARRAY
     if (flag) // Include valid element from A
     {
         // Print output if there is at least one 'B' in output array 'C'
