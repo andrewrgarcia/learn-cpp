@@ -33,13 +33,13 @@ int findMaxUtil(Node *root, int &res)
 
     // Max path for parent call of root. This path must
     // include at-most one child of root
-    // "one child" - Andrew
+    // ONE CHILD
     int max_single = max(max(l, r) + root->data, root->data);
 
     // Max Top represents the sum when the Node under
     // consideration is the root of the maxsum path and no
     // ancestors of root are there in max sum path
-    // "both children" - Andrew
+    // BOTH CHILDREN vv
     int max_top = max(max_single, l + r + root->data); // no max b/t l and r
 
     res = max(res, max_top); // Store the Maximum Result.
