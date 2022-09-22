@@ -9,8 +9,6 @@ for i in */
 do 
     var=$( cat $i/completion )
     echo "|${i::-1} |  $var |"   
-    # cat $i/completion
-    # echo " "
     completed=${var::-3}
     fracsum=$((fracsum+completed))
 done 
