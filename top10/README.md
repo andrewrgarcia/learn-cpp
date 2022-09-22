@@ -10,6 +10,7 @@ Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-
 |6__Number-Theory |  2/10 |
 |7__BIT |  6/10 |
 |8__String-Array |  6/10 |
+| TOTAL | 32/80 |
 ## Index
 1\_\_ Graph
 

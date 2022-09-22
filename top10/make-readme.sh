@@ -4,15 +4,17 @@ echo "Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorith
 # echo "## Progress"
 echo "| Section | Progress |"
 echo "| -------- | --------|"
+fracsum=0
 for i in */
-
-
 do 
     var=$( cat $i/completion )
     echo "|${i::-1} |  $var |"   
     # cat $i/completion
     # echo " "
+    completed=${var::-3}
+    fracsum=$((fracsum+completed))
 done 
+echo "| TOTAL | $fracsum/80 |"
 
 echo "## Index"
 cat index
