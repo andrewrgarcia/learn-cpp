@@ -1,30 +1,15 @@
 # Top 10 algorithms in Interview Questions
 Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
-## Progress
-#### 1__Graphs:
-4/10
- 
-#### 2__Linked-Lists:
-3/10
- 
-#### 3__Dynamic-Programming:
-3/10
- 
-#### 4__Sort-Search:
-6/10
- 
-#### 5__Binary-Tree:
-2/10
- 
-#### 6__Number-Theory:
-2/10
- 
-#### 7__BIT:
-6/10
- 
-#### 8__String-Array:
-6/10
- 
+| Section | Progress |
+| -------- | --------|
+|1__Graphs |  4/10 |
+|2__Linked-Lists |  3/10 |
+|3__Dynamic-Programming |  3/10 |
+|4__Sort-Search |  6/10 |
+|5__Binary-Tree |  2/10 |
+|6__Number-Theory |  2/10 |
+|7__BIT |  6/10 |
+|8__String-Array |  6/10 |
 ## Index
 1\_\_ Graph
 
