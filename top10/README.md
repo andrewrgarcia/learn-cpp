@@ -1,15 +1,15 @@
 # Top 10 algorithms in Interview Questions
 Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
-| Section | Progress | Bar |
+| Section | Progress | Progress Bar |
 | -------- | --------| --------|
-|1__Graphs |  4/10 |  1 2 3 4 |
-|2__Linked-Lists |  3/10 |  1 2 3 |
-|3__Dynamic-Programming |  3/10 |  1 2 3 |
-|4__Sort-Search |  6/10 |  1 2 3 4 5 6 |
-|5__Binary-Tree |  5/10 |  1 2 3 4 5 |
-|6__Number-Theory |  7/10 |  1 2 3 4 5 6 7 |
-|7__BIT |  6/10 |  1 2 3 4 5 6 |
-|8__String-Array |  6/10 |  1 2 3 4 5 6 |
+|1__Graphs |  4/10 | :white_square_button::white_square_button::white_square_button::white_square_button:
+|2__Linked-Lists |  3/10 | :white_square_button::white_square_button::white_square_button:
+|3__Dynamic-Programming |  3/10 | :white_square_button::white_square_button::white_square_button:
+|4__Sort-Search |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|5__Binary-Tree |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 | TOTAL | 40/80 |   |
 ## Index
 1\_\_ Graph
