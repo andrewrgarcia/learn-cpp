@@ -7,10 +7,10 @@ Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-
 |3__Dynamic-Programming |  3/10 |
 |4__Sort-Search |  6/10 |
 |5__Binary-Tree |  5/10 |
-|6__Number-Theory |  2/10 |
+|6__Number-Theory |  4/10 |
 |7__BIT |  6/10 |
 |8__String-Array |  6/10 |
-| TOTAL | 35/80 |
+| TOTAL | 37/80 |
 ## Index
 1\_\_ Graph
 
