@@ -1,7 +1,5 @@
 # learn cpp (c++)
 
-some tutorials from:
-
-http://www.cplusplus.com/doc/tutorial/program_structure/
+Some tutorials from [C++ tutorial site](http://www.cplusplus.com/doc/tutorial/program_structure/)
 
 (back in 2020)
