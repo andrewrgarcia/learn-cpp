@@ -1,17 +1,20 @@
 # Top 10 algorithms in Interview Questions
-Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
+
+From [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
 | Section | Progress | Progress Bar |
 | -------- | --------| --------|
-|1__Graphs |  8/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|2__Linked-Lists |  3/10 | :white_square_button::white_square_button::white_square_button:
-|3__Dynamic-Programming |  3/10 | :white_square_button::white_square_button::white_square_button:
-|4__Sort-Search |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|5__Binary-Tree |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 44/80 |   |
+|1**Graphs | 8/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|2**Linked-Lists | 3/10 | :white_square_button::white_square_button::white_square_button:
+|3**Dynamic-Programming | 3/10 | :white_square_button::white_square_button::white_square_button:
+|4**Sort-Search | 6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|5**Binary-Tree | 5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|6**Number-Theory | 7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|7**BIT | 6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|8**String-Array | 6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+| TOTAL | 44/80 | |
+
 ## Index
+
 1\_\_ Graph
 
 1. Breadth First Search (BFS)
