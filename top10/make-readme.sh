@@ -15,10 +15,22 @@ do
     do
         echo -n ':white_square_button:'
     done
+
     echo
     fracsum=$((fracsum+completed))
 done 
-echo "| TOTAL | $fracsum/80 |   |"
+echo -n "| TOTAL | $fracsum/80 | "
+TOTAL_FLOOR=$((fracsum*10/80))
+for i in $(seq 1 $TOTAL_FLOOR )
+do
+    echo -n ':black_circle:'
+done
+for i in $(seq 1 $((8-TOTAL_FLOOR)) )
+do
+    echo -n ':white_circle:'
+done
+
+echo  " |"
 
 echo "## Index"
 cat index
