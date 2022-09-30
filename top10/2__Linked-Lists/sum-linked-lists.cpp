@@ -3,20 +3,21 @@
 using namespace std;
 
 // A linked List Node
-class Node {
+class Node
+{
 public:
 	int data;
-	Node* next;
+	Node *next;
 };
 
 typedef Node node;
 
 /* A utility function to insert
 a node at the beginning of linked list */
-void push(Node** head_ref, int new_data)
+void push(Node **head_ref, int new_data)
 {
 	/* allocate node */
-	Node* new_node = new Node[(sizeof(Node))];
+	Node *new_node = new Node[(sizeof(Node))];
 
 	/* put in the data */
 	new_node->data = new_data;
@@ -29,9 +30,10 @@ void push(Node** head_ref, int new_data)
 }
 
 /* A utility function to print linked list */
-void printList(Node* node)
+void printList(Node *node)
 {
-	while (node != NULL) {
+	while (node != NULL)
+	{
 		cout << node->data << " ";
 		node = node->next;
 	}
@@ -39,18 +41,19 @@ void printList(Node* node)
 }
 
 // A utility function to swap two pointers
-void swapPointer(Node** a, Node** b)
+void swapPointer(Node **a, Node **b)
 {
-	node* t = *a;
+	node *t = *a;
 	*a = *b;
 	*b = t;
 }
 
 /* A utility function to get size of linked list */
-int getSize(Node* node)
+int getSize(Node *node)
 {
 	int size = 0;
-	while (node != NULL) {
+	while (node != NULL)
+	{
 		node = node->next;
 		size++;
 	}
@@ -61,7 +64,7 @@ int getSize(Node* node)
 // represented by head1 and head2 and returns
 // head of the resultant linked list. Carry
 // is propagated while returning from the recursion
-node* addSameSize(Node* head1, Node* head2, int* carry)
+node *addSameSize(Node *head1, Node *head2, int *carry)
 {
 	// Since the function assumes linked lists are of same
 	// size, check any of the two head pointers
@@ -71,11 +74,10 @@ node* addSameSize(Node* head1, Node* head2, int* carry)
 	int sum;
 
 	// Allocate memory for sum node of current two nodes
-	Node* result = new Node[(sizeof(Node))];
+	Node *result = new Node[(sizeof(Node))];
 
 	// Recursively add remaining nodes and get the carry
-	result->next
-		= addSameSize(head1->next, head2->next, carry);
+	result->next = addSameSize(head1->next, head2->next, carry);
 
 	// add digits of current nodes and propagated carry
 	sum = head1->data + head2->data + *carry;
@@ -94,13 +96,14 @@ node* addSameSize(Node* head1, Node* head2, int* carry)
 // right sublist is added, the carry
 // must be added toe left side of larger
 // list to get the final result.
-void addCarryToRemaining(Node* head1, Node* cur, int* carry,
-						Node** result)
+void addCarryToRemaining(Node *head1, Node *cur, int *carry,
+						 Node **result)
 {
 	int sum;
 
 	// If diff. number of nodes are not traversed, add carry
-	if (head1 != cur) {
+	if (head1 != cur)
+	{
 		addCarryToRemaining(head1->next, cur, carry,
 							result);
 
@@ -116,18 +119,20 @@ void addCarryToRemaining(Node* head1, Node* cur, int* carry,
 // The main function that adds two linked lists
 // represented by head1 and head2. The sum of
 // two lists is stored in a list referred by result
-void addList(Node* head1, Node* head2, Node** result)
+void addList(Node *head1, Node *head2, Node **result)
 {
-	Node* cur;
+	Node *cur;
 
 	// first list is empty
-	if (head1 == NULL) {
+	if (head1 == NULL)
+	{
 		*result = head2;
 		return;
 	}
 
 	// second list is empty
-	else if (head2 == NULL) {
+	else if (head2 == NULL)
+	{
 		*result = head1;
 		return;
 	}
@@ -141,7 +146,8 @@ void addList(Node* head1, Node* head2, Node** result)
 	if (size1 == size2)
 		*result = addSameSize(head1, head2, &carry);
 
-	else {
+	else
+	{
 		int diff = abs(size1 - size2);
 
 		// First list should always be larger than second
@@ -171,8 +177,8 @@ int main()
 {
 	Node *head1 = NULL, *head2 = NULL, *result = NULL;
 
-	int arr1[] = { 9, 9, 9 };
-	int arr2[] = { 1, 8 };
+	int arr1[] = {9, 9, 9};
+	int arr2[] = {1, 8};
 
 	int size1 = sizeof(arr1) / sizeof(arr1[0]);
 	int size2 = sizeof(arr2) / sizeof(arr2[0]);
@@ -194,4 +200,3 @@ int main()
 }
 
 // This code is contributed by rathbhupendra
-
