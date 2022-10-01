@@ -3,14 +3,14 @@ Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-
 | Section | Progress | Progress Bar |
 | -------- | --------| --------|
 |1__Graphs |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|2__Linked-Lists |  4/10 | :white_square_button::white_square_button::white_square_button::white_square_button:
+|2__Linked-Lists |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |3__Dynamic-Programming |  3/10 | :white_square_button::white_square_button::white_square_button:
 |4__Sort-Search |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |5__Binary-Tree |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 47/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle: |
+| TOTAL | 48/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
 ## Index
 1\_\_ Graph
 
