@@ -1,6 +1,8 @@
 # learn C++
 
-My journey into the C++ language
+![](cpp.png)
+
+My journey into C++
 
 ## [top10](https://github.com/andrewrgarcia/learn-cpp/tree/main/top10)
 
