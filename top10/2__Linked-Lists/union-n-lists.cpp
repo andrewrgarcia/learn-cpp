@@ -30,6 +30,7 @@ struct Node* getUnion(struct Node* head1,
 {
 	struct Node* ans = new Node(-1);
 	struct Node* head = ans;
+    // CREATE A SET VARIABLE TO LUMP ALL UNIQUE DATA FROM BOTH HEADS  <-- MAKES UNION
 	set<int> st;
 	while (head1 != NULL) {
 		st.insert(head1->data);
@@ -39,11 +40,13 @@ struct Node* getUnion(struct Node* head1,
 		st.insert(head2->data);
 		head2 = head2->next;
 	}
+    // ADD UNIQUE TO NEW LINKED-LIST 
 	for (auto it : st) {
 		struct Node* t = new Node(it);
 		ans->next = t;
 		ans = ans->next;
 	}
+    // STRANGE LINES, WHY NOT RETURN ans? head IS A POINTER TO ans, MAYBE THAT'S WHY
 	head = head->next;
 	return head;
 }
@@ -60,6 +63,7 @@ struct Node* getIntersection(struct Node* head1,
 	// Traverse list1 and search each element of it in
 	// list2. If the element is present in list 2, then
 	// insert the element to result
+    // PRETTY SELF EXPLANATORY; ONLY DATA PRESENT IN BOTH LISTS:
 	while (t1 != NULL) {
 		if (isPresent(head2, t1->data))
 			push(&result, t1->data);
@@ -115,7 +119,7 @@ int main()
 	struct Node* intersecn = NULL;
 	struct Node* unin = NULL;
 
-	/*create a linked lists 10->15->5->20 */
+	/*create a linked lists 10->15->4->20 */
 	push(&head1, 20);
 	push(&head1, 4);
 	push(&head1, 15);
