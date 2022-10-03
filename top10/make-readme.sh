@@ -1,4 +1,5 @@
 {
+cd ~/learn-cpp/top10
 echo "# Top 10 algorithms in Interview Questions"
 echo "Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)" 
 # echo "## Progress"
