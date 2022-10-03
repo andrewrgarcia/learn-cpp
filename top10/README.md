@@ -1,16 +1,18 @@
 # Top 10 algorithms in Interview Questions
-Taken from [Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/)
+From [Top 10 algorithms in Interview Questions by Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/).
+
+Comments made by me are in all caps. May have deleted some comments from GFG better understanding. *make_readme.sh* generates the exercise completion counter under this paragraph. To use, update the *completion* files in each exercises sub-folder and then run the .sh file. 
 | Section | Progress | Progress Bar |
 | -------- | --------| --------|
 |1__Graphs |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|2__Linked-Lists |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|2__Linked-Lists |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |3__Dynamic-Programming |  3/10 | :white_square_button::white_square_button::white_square_button:
 |4__Sort-Search |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |5__Binary-Tree |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 48/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
+| TOTAL | 49/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle::white_circle: |
 ## Index
 1\_\_ Graph
 
