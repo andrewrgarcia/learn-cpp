@@ -18,25 +18,21 @@ int subsetSum(int a[], int n, int sum)
     if (n <= 0)
         return 0;
 
-    // If the value is not -1 it means it
-    // already call the function
-    // with the same value.
-    // it will save our from the repetition.
+    // IF THE VALUE IS NOT -1 IT MEANS
+    // THE ENTRY WAS ALREADY CALLED BY THE FUNCTION;
+    // IT WILL SAVE US THE REPETITION
     if (tab[n - 1][sum] != -1)
         return tab[n - 1][sum];
 
-    // if the value of a[n-1] is
-    // greater than the sum.
-    // we call for the next value
+    // IF THE VALUE a[n-1] IS GREATER THAN
+    // THE DESIRED sum, THE NEXT VALUE IS CALLED RECURSIVELY VV
     if (a[n - 1] > sum)
         return tab[n - 1][sum] = subsetSum(a, n - 1, sum);
     else
     {
-
-        // Here we do two calls because we
-        // don't know which value is
-        // full-fill our criteria
-        // that's why we doing two calls
+        // TWO RECURSION BRANCHES ARE RUN
+        // BECAUSE EITHER AND BRANCHES THEREOF MAY
+        // FULFILL OUR sum CRITERIA
         return tab[n - 1][sum] = subsetSum(a, n - 1, sum) ||
                                  subsetSum(a, n - 1, sum - a[n - 1]);
     }
