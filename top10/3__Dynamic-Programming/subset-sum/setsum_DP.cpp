@@ -16,8 +16,9 @@ bool isSubsetSum(int set[], int n, int sum)
     for (int i = 0; i <= n; i++)
         subset[i][0] = true;
 
-    // If sum is not 0 and set is empty,
-    // then answer is false
+    // If sum is not 0 and set is empty, then answer is false
+    // ^^ THE for loop BELOW ONLY POPULATES REMAINING DP TO FALSE;
+    // THERE IS NO SECOND CONDITIONAL "EMPTY SET"
     for (int i = 1; i <= sum; i++)
         subset[0][i] = false;
 
@@ -27,19 +28,21 @@ bool isSubsetSum(int set[], int n, int sum)
         for (int j = 1; j <= sum; j++)
         {
             if (j < set[i - 1])
-                subset[i][j] = subset[i - 1][j];
+                subset[i][j] = subset[i - 1][j]; // ANALOGOUS TO IGNORING LAST ELEMENT
             if (j >= set[i - 1])
-                subset[i][j] = subset[i - 1][j] || subset[i - 1][j - set[i - 1]];
+                subset[i][j] = subset[i - 1][j] || subset[i - 1][j - set[i - 1]]; // INCLUDING OR EXCLUDING LAST ELEMENT
+                                                                                  //  (FOR THE WHOLE LOOP, MUST BE AN
+                                                                                  // EXCLUSION INCLUSION COMBINATION SUCH THAT IT EQUALS SUM ELSE FALSE)
         }
     }
 
-    /* // uncomment this code to print table
+    // uncomment this code to print table
     for (int i = 0; i <= n; i++)
     {
-    for (int j = 0; j <= sum; j++)
-        printf ("%4d", subset[i][j]);
-    cout <<"\n";
-    }*/
+        for (int j = 0; j <= sum; j++)
+            printf("%4d", subset[i][j]);
+        cout << "\n";
+    }
 
     return subset[n][sum];
 }
