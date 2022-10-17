@@ -9,7 +9,7 @@ bool isSubsetSum(int set[], int n, int sum)
 
     // Base Cases
     if (sum == 0)
-        return true;
+        return true; // <--- RECUR FUNCTION WILL ONLY EVALUATE TRUE IF THIS CONDITION IS MET SOMEWHERE IN THE COMPUTATION
     if (n == 0)
         return false;
 
@@ -18,8 +18,7 @@ bool isSubsetSum(int set[], int n, int sum)
     if (set[n - 1] > sum)
         return isSubsetSum(set, n - 1, sum);
 
-    /* else, check if sum can be obtained by any
-of the following:
+    /* else, check if sum can be obtained by EITHER OF the following:
     (a) including the last element
     (b) excluding the last element */
     return isSubsetSum(set, n - 1, sum) || isSubsetSum(set, n - 1, sum - set[n - 1]);
