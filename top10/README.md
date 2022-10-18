@@ -6,13 +6,13 @@ Comments made by me are in all caps. May have deleted some comments from GFG bet
 | -------- | --------| --------|
 |1__Graphs |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |2__Linked-Lists |  8/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|3__Dynamic-Programming |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|3__Dynamic-Programming |  8/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |4__Sort-Search |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |5__Binary-Tree |  5/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 55/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle::white_circle: |
+| TOTAL | 56/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle: |
 ## Index
 1\_\_ Graph
 
