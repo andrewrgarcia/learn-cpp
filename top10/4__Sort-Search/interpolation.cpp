@@ -61,3 +61,6 @@ int main()
 }
 
 // This code is contributed by Mukul Singh.
+
+// Time Complexity: O(log2(log2 n)) for the average case, and O(n) for the worst case
+//  https://iq.opengenus.org/time-complexity-of-interpolation-search/
