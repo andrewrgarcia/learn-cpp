@@ -22,10 +22,10 @@ void printClosest(int arr[], int n, int x)
             diff = abs(arr[l] + arr[r] - x);
         }
 
-        // If this pair has more sum, move to smaller values.
+        // IF THE SELECTED PAIR HAS A SUM LARGER THAN X, MOVE r TO SMALLER VALUES.
         if (arr[l] + arr[r] > x)
             r--;
-        else // Move to larger values
+        else // MOVE l TO LARGER VALUES
             l++;
     }
 
