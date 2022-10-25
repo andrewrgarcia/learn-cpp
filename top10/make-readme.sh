@@ -22,7 +22,9 @@ do
     echo
     fracsum=$((fracsum+completed))
 done 
-echo -n "| TOTAL | $fracsum/80 | "
+percentage=$((fracsum*100/80))
+# echo -n "| TOTAL | $fracsum/80 | "    # fraction complete
+echo -n "| TOTAL | $percentage% | "     # express in percentage instead
 TOTAL_FLOOR=$((fracsum*10/80))
 for i in $(seq 1 $TOTAL_FLOOR )
 do

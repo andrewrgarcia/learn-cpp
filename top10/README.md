@@ -12,7 +12,7 @@ Comments made by me are in all caps. May have deleted some comments from GFG bet
 |6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 62/80 | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle: |
+| TOTAL | 77% | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle::white_circle: |
 ## Index
 1\_\_ Graph
 
