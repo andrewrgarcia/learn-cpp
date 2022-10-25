@@ -22,6 +22,10 @@ Node *newNode(int key)
 void fillMap(Node *root, int d, int l,
              map<int, pair<int, int>> &m)
 {
+    // NOT PROPERLY DOCUMENTED SO HERE GOES
+    // d == HORIZONTAL DISTANCE
+    // l == 'LEVEL'; DEPTH
+
     if (root == NULL)
         return;
 
@@ -29,7 +33,7 @@ void fillMap(Node *root, int d, int l,
     {
         m[d] = make_pair(root->data, l);
     }
-    else if (m[d].second > l)
+    else if (m[d].second > l) // REPLACEMENT (DOES) WHEN RECUR
     {
         m[d] = make_pair(root->data, l);
     }

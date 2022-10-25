@@ -20,15 +20,15 @@ public:
 };
 
 /*
-        1
+         1
         / \
-        2 3
+       2   3
         \
-        4
-        \
-            5
+         4
+          \
+           5
             \
-            6
+             6
     Top view of the above binary tree is
     2 1 3 6
 */

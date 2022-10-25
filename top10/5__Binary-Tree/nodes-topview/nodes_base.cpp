@@ -47,23 +47,23 @@ void topview(Node *root)
         // to hd, or returns zero otherwise.
         if (m.count(hd) == 0)
             m[hd] = root->data;
-        if (root->left)
+        if (root->left) // THESE CONDITIONALS EVALUATE WHETHER THERE ARE POINTERS TO LEFT OF ROOT
         {
             root->left->hd = hd - 1;
             q.push(root->left);
         }
-        if (root->right)
+        if (root->right) // ... "" AND TO RIGHT OF ROOT
         {
             root->right->hd = hd + 1;
             q.push(root->right);
         }
-        q.pop(); //
+        q.pop(); // REMOVES PRECEDING NODES (IN FRONT)
         root = q.front();
     }
 
     for (auto i = m.begin(); i != m.end(); i++)
     {
-        cout << i->second << " ";
+        cout << i->second << " "; // PRINTS VALUES IN m MAP
     }
 }
 
