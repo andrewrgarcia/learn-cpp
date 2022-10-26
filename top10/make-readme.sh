@@ -34,6 +34,8 @@ done
 
 echo  " |"
 
+cat README-using.md
+
 echo "## Index"
 cat index
 } > README.md
