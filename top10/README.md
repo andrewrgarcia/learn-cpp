@@ -1,7 +1,14 @@
 # Top 10 algorithms in Interview Questions
 From [Top 10 algorithms in Interview Questions by Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/).
 
-Comments made by me are in all caps. May have deleted some comments from GFG better understanding. *make_readme.sh* generates the exercise completion counter under this paragraph. To use, update the *completion* files in each exercises sub-folder and then run the .sh file. 
+My comments were written in ALL CAPS. I may have deleted some comments from GFG better understanding. 
+
+## How to use this folder to study 
+
+You may use the files already present here or clear all and download each individually as you do your coding review. 
+To clear, 
+
+*make_readme.sh* generates the exercise completion counter under this paragraph. To use, update the *completion* files in each exercises sub-folder and then run the .sh file. 
 | Section | Progress | Progress Bar |
 | -------- | --------| --------|
 |1__Graphs |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
