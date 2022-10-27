@@ -1,24 +1,24 @@
 # Top 10 algorithms in Interview Questions
 
-From [Top 10 algorithms in Interview Questions by Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/). My comments on the .cpp files are in ALL CAPS. I May have deleted or edited some comments from GFG for my better understanding.
+From [Top 10 algorithms in Interview Questions by Geeks for Geeks](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/). My comments on the `.cpp` files are in ALL CAPS. I May have deleted or edited some comments from GFG for my better understanding.
 | Section | Progress | Progress Bar |
 | -------- | --------| --------|
 |1__Graphs |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |2__Linked-Lists |  8/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |3__Dynamic-Programming |  9/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |4__Sort-Search |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|5__Binary-Tree |  9/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|5__Binary-Tree |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |6__Number-Theory |  7/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 81% | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
-## Using this folder to review
+| TOTAL | 82% | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
+## Using this folder to study C++ DS&A
 
-The C++ files of this folder may be emptied and added individually from the above GFG site as the material is reviewed by the below protocol.
+To keep a record of your progress you may use Git as a version control protocol, which would begin by [forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the [main repository](https://github.com/andrewrgarcia/learn-cpp). After forking, you may clone it by copying the `SSH` or `HTTPS` address for your fork and [cloning it](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) with a `git clone` command. The `.cpp` files of this folder may be emptied and added individually from the [GFG "Top 10" site](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) as the material is reviewed by the below protocol. 
 
-#### Reset
+#### Reset Content
 
-In a terminal under this directory
+This will remove all `.cpp` files from the folders in this directory and reset the progress table counter to "0/10" for all topics. In a terminal under this directory:
 
 ```bash
 find . -name \*.cpp -type f -delete     # to remove all C++ files in all folders

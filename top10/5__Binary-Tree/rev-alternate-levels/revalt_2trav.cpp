@@ -41,7 +41,7 @@ void storeAlternate(Node *root, char arr[],
     }
 
     // Store elements of right subtree
-    storeAlternate(root->right, arr, index, l + 1);
+    storeAlternate(root->right, arr, index, l + 1);        // EVEN IF IT GETS TO LEFT ON NEXT RECUR, IF NEXT LEFT DOESN'T EXIST, CODE-BLOCK IS RUN FOR CURRENT RIGHT (AS IN-ORDER TRAV) 
 }
 
 // Function to modify Binary Tree
@@ -62,7 +62,7 @@ void modifyTree(Node *root, char arr[],
     // is an odd level node
     if (l % 2 != 0)
     {
-        root->data = arr[*index];
+        root->data = arr[*index];              // UPDATE (SIMPLE ENOUGH)
         (*index)++;
     }
 
@@ -111,9 +111,9 @@ void printInorder(struct Node *root)
 {
     if (root == NULL)
         return;
-    printInorder(root->left);
+    printInorder(root->left);       // GOES TO LEFTMOST RECURSIVELY THEN PRINTS AND GORES TO RIGHT
     cout << root->data << " ";
-    printInorder(root->right);
+    printInorder(root->right);      //  ^ ^ 
 }
 
 // Driver Program to test above functions

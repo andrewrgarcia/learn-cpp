@@ -24,6 +24,7 @@ void preorder(struct Node *root1, struct Node *root2, int lvl)
     // is passed and right of root2 in
     // first call and opposite
     // in second call.
+    // LIKE AND OUTWARDS TO INWARDS SWAP
     preorder(root1->left, root2->right, lvl + 1);
     preorder(root1->right, root2->left, lvl + 1);
 }
