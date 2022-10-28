@@ -24,10 +24,10 @@ int findMinX(int num[], int rem[], int k)
         int j;
         for (j = 0; j < k; j++)
             if (x % num[j] != rem[j])
-                break;
+                break; // WILL NOT BREAK ONCE AN x WHICH STARTS MEETING ALL % OPS IS FOUND
 
         // If all remainders matched, we found x
-        if (j == k)
+        if (j == k) // THIS CONDITION WILL BE TRUE IF ALL NUMBERS IN ARRAYS OF LEN k PASS
             return x;
 
         // Else try next number
