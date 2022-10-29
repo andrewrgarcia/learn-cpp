@@ -53,6 +53,7 @@ int nCrModpLucas(int n, int r, int p)
 int main()
 {
     int n = 1000, r = 900, p = 13;
-    cout << "Value of nCr % p is " << nCrModpLucas(n, r, p);
+    printf("%d choose %d %% %d ( nCr %% p ) = %d\n", n, r, p, nCrModpLucas(n, r, p));
+    // cout << "Value of nCr % p is " << nCrModpLucas(n, r, p);
     return 0;
 }

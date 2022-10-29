@@ -8,10 +8,10 @@ From [Top 10 algorithms in Interview Questions by Geeks for Geeks](https://www.g
 |3__Dynamic-Programming |  9/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |4__Sort-Search |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |5__Binary-Tree |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-|6__Number-Theory |  9/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
+|6__Number-Theory |  10/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |7__BIT |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
 |8__String-Array |  6/10 | :white_square_button::white_square_button::white_square_button::white_square_button::white_square_button::white_square_button:
-| TOTAL | 85% | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
+| TOTAL | 86% | :black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::black_circle::white_circle::white_circle: |
 ## Using this folder to review algorithms in C++
 
 To keep a record of your progress you may use Git as a version control protocol, which would begin by [forking](https://docs.github.com/en/get-started/quickstart/fork-a-repo) the [main repository](https://github.com/andrewrgarcia/learn-cpp). After forking, you may clone it by copying the `SSH` or `HTTPS` address for your fork and [cloning it](https://git-scm.com/book/en/v2/Git-Basics-Getting-a-Git-Repository) with a `git clone` command. The `.cpp` files of this folder may be emptied and added individually from the [GFG "Top 10" site](https://www.geeksforgeeks.org/top-10-algorithms-in-interview-questions/) as the material is reviewed by the below protocol.
