@@ -18,6 +18,7 @@ int countSetBits(int n)
         bool k = 0;
 
         // change is iterator from 2^i to 1
+        // I.E. SET TO TO iTH BIT (IF i = 2 AND FIRST BIT WAS "0", THEN OPERTATION DOES: 10)
         int change = 1 << i;
 
         // This will loop from 0 to n for
