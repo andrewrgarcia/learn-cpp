@@ -25,6 +25,8 @@ unsigned int countSetBitsUtil(unsigned int x)
 {
     if (x <= 0)
         return 0;
+    // BITS ARE EXPRESSED IN BINARY; IT MAKES SENSE THEN THAT MODULO % 2 == 0 IS A "0" OR UNSET BIT
+    // SECOND ARGUMENT MAKES COUNT OF ALL BITS IN A PARTICULAR NUMBER BY SHIFTING THE BIT LOC TO RIGHT I.E. FLOOR DIVISION
     return (x % 2 == 0 ? 0 : 1) + countSetBitsUtil(x / 2);
 }
 
