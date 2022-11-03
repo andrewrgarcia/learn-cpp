@@ -2,7 +2,7 @@
 using namespace std;
 
 // Utility functions to find minimum and maximum of
-// two elements
+// two elements.
 int min(int x, int y) { return (x < y) ? x : y; }
 int max(int x, int y) { return (x > y) ? x : y; }
 
