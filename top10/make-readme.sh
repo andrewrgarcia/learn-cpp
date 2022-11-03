@@ -36,7 +36,7 @@ echo  " |"
 
 cat README-using.md
 
-echo "## Index"
+echo "# Index"
 cat index
 } > README.md
 # $(seq 1 $END)

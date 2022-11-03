@@ -2,7 +2,7 @@
 using namespace std;
 
 // Utility functions to find minimum and maximum of
-// two elements.
+// two elements
 int min(int x, int y) { return (x < y) ? x : y; }
 int max(int x, int y) { return (x > y) ? x : y; }
 
@@ -23,8 +23,8 @@ int findLength(int arr[], int n)
             mx = max(mx, arr[j]);
 
             // If current subarray has all contiguous elements
-            if ((mx - mn) == j - i)
-                max_len = max(max_len, mx - mn + 1);
+            if ((mx - mn) == j - i)                  // CONTIGUOUS ELEMENTS HAVE A DIFFERENCE OF +1 INTEGER IN THE SEQUENCE
+                max_len = max(max_len, mx - mn + 1); // BECAUSE OF INIT max_LEN = 1 (LINE 12)
         }
     }
     return max_len; // Return result
