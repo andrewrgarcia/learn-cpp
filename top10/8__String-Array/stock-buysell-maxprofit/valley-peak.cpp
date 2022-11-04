@@ -2,16 +2,14 @@
 using namespace std;
 
 // Preprocessing helps the code run faster
+// OF "for loop" !
 #define fl(i, a, b) for (int i = a; i < b; i++)
 
-// Function that return
 int maxProfit(int *prices, int size)
 {
-    // maxProfit adds up the difference between
-    // adjacent elements if they are in increasing order
+    // ONLY ADDS ADJACENT & POSITIVE PRICE DIFFERENCES TO maxProfit; CLEVER.
     int maxProfit = 0;
-    // The loop starts from 1
-    // as its comparing with the previous
+    // Loop starts from 1 BECAUSE IT IS comparing with the FORMER i.e, i - 1
     fl(i, 1, size) if (prices[i] > prices[i - 1]) maxProfit += prices[i] - prices[i - 1];
     return maxProfit;
 }
