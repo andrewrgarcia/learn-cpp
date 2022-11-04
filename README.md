@@ -16,10 +16,6 @@ Exercises from [Google for Education: C++](https://developers.google.com/edu/c++
 
 Basic but interesting / valuable C++ worked-out exercises for problems from [HackerRank](https://www.hackerrank.com/)
 
-## [structures](https://github.com/andrewrgarcia/learn-cpp/tree/main/structures)
-
-Code for C++ data structures. Most of these developed by me.
-
 ## [\_\_secondary](https://github.com/andrewrgarcia/learn-cpp/tree/main/__secondary)
 
 - absolute-beginner
