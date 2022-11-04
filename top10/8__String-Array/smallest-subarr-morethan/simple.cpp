@@ -27,6 +27,7 @@ int smallestSubWithSum(int arr[], int n, int x)
             // If sum becomes more than x and length of
             // this subarray is smaller than current smallest
             // length, update the smallest length (or result)
+            // BOTH CONDITIONS MUST BE MET AND ARE TRAVERSED ON DOUBLE LOOP O(n^2)
             if (curr_sum > x && (end - start + 1) < min_len)
                 min_len = (end - start + 1);
         }
@@ -37,6 +38,7 @@ int smallestSubWithSum(int arr[], int n, int x)
 /* Driver program to test above function */
 int main()
 {
+    // CONDITIONALS BELOW ... ? COUT RETURN "not possible" IF res IS THE LENGTH OF THE ARRAY+1
     int arr1[] = {1, 4, 45, 6, 10, 19};
     int x = 51;
     int n1 = sizeof(arr1) / sizeof(arr1[0]);

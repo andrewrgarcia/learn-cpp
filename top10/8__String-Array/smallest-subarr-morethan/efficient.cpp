@@ -15,6 +15,8 @@ int smallestSubWithSum(int arr[], int n, int x)
     int start = 0, end = 0;
     while (end < n)
     {
+        // THIS ALGORITHM IS HAS A SOLUTION O(2*n) WHICH IS EQUAL TO O(n)
+
         // Keep adding array elements while current sum
         // is smaller than or equal to x
         while (curr_sum <= x && end < n)
